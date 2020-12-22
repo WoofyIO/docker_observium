@@ -15,7 +15,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     svn --username ${SVN_USER} --password ${SVN_PASS} --trust-server-cert --non-interactive co http://svn.observium.org/svn/observium/trunk observium && \
     cd observium && \
     mkdir -p /config && touch /config/config.php && \
-    rm -Rf /opt/observium/.svn && \
+    #rm -Rf /opt/observium/.svn && \
     phpenmod mcrypt && \
     a2dismod mpm_event && \
     a2enmod mpm_prefork && \
@@ -30,6 +30,7 @@ COPY observium_cron.conf /etc/cron.d/observium
 ADD start.sh /
 
 RUN chmod +x /start.sh
+RUN chmod 644 /etc/cron.d/observium
 RUN sed -i 's/\r//' /start.sh
 
 EXPOSE 80 514 514/udp
