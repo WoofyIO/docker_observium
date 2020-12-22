@@ -56,8 +56,8 @@ jobs:
               SVN_USER=${{ secrets.SVN_USER }}
               SVN_PASS=${{ secrets.SVN_PASS }}
       - 
-          name: Deploy Image
-          uses: fjogeleit/http-request-action@master
-          with:
-              url: ${{ secrets.DOCKER_DEP_URL }}
-              method: 'POST'
+#          name: Deploy Image
+#          uses: fjogeleit/http-request-action@master
+#          with:
+#              url: ${{ secrets.DOCKER_DEP_URL }}
+#              method: 'POST'
