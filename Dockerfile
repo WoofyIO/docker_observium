@@ -32,7 +32,7 @@ ADD start.sh /
 RUN chmod +x /start.sh
 RUN sed -i 's/\r//' /start.sh
 
-EXPOSE 80 514
+EXPOSE 80 514 514/udp
 
 CMD ["/start.sh"]
 
