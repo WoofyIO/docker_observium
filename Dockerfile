@@ -14,7 +14,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     mkdir -p /opt/observium && cd /opt && \ 
     svn --username ${SVN_USER} --password ${SVN_PASS} --trust-server-cert --non-interactive co http://svn.observium.org/svn/observium/trunk observium && \
     cd observium && \
-    mkdir -p /config/rrd && touch /config/config.php && ln -s /config/rrd rrd && ln -s /config/config.php config.php && \
+    mkdir -p /config/rrd && touch /config/config.php && ln -s /config/rrd rrd && \
     rm -Rf /opt/observium/.svn && \
     phpenmod mcrypt && \
     a2dismod mpm_event && \
