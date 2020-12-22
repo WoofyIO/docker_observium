@@ -16,7 +16,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     cd observium && \
     mkdir -p /config && touch /config/config.php && \
     rm -Rf /opt/observium/.svn && \
-    phpenmod mcrypt && 
+    phpenmod mcrypt
     #a2dismod mpm_event && \
     #a2enmod mpm_prefork && \
     #a2enmod php7.4 && \
