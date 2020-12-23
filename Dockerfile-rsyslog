@@ -35,5 +35,5 @@ RUN sed -i 's/\r//' /start-rsyslog.sh
 
 EXPOSE 514 514/udp
 
-CMD ["start-rsyslog.sh"]
+CMD ["/start-rsyslog.sh"]
 

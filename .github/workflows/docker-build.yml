@@ -107,5 +107,5 @@ jobs:
           name: Deploy Image
           uses: fjogeleit/http-request-action@master
           with:
-              url: ${{ secrets.DOCKER_DEP_URL }}
+              url: ${{ secrets.DOCKER_DEP2_URL }}
               method: 'POST'
